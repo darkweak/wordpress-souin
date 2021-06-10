@@ -1,0 +1,17 @@
+<?php
+
+require_once(__DIR__ . '/AbstractField.php');
+
+class NumberField extends AbstractField
+{
+    protected $value = 0;
+
+    public function getField()
+    {
+        return <<<HTML
+<div>
+  <input type="number" id="{$this->name}" name="{$this->name}" value="{$this->value}" />
+</div>
+HTML;
+    }
+}
